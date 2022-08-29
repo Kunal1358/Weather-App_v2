@@ -1,0 +1,110 @@
+{
+	"info": {
+		"_postman_id": "ab8fe86c-75ce-48ae-9667-f906b316e4d4",
+		"name": "Weather-App_v2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19785433"
+	},
+	"item": [
+		{
+			"name": "get coordinates",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{local}}/getAddressCoordinates?address=Red Fort",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"getAddressCoordinates"
+					],
+					"query": [
+						{
+							"key": "address",
+							"value": "Red Fort"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get forecast",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{local}}/getForeCast?lat=0&long=0",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"getForeCast"
+					],
+					"query": [
+						{
+							"key": "lat",
+							"value": "0"
+						},
+						{
+							"key": "long",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get address forecast",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{local}}/getAddressForeCast?address=mumbai",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"getAddressForeCast"
+					],
+					"query": [
+						{
+							"key": "address",
+							"value": "mumbai"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "local",
+			"value": "http://localhost:3000/api/v1",
+			"type": "string"
+		}
+	]
+}
