@@ -1,4 +1,4 @@
-# Weather-App_v2
+# Weather Wave
 
 ## Features
 
